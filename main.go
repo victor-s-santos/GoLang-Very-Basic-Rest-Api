@@ -15,11 +15,10 @@ type Article struct {
 
 type Articles []Article
 
-func allArticles(w http.ResponseWriter, r*http.Request){
+func allArticles(w http.ResponseWriter, r *http.Request) {
 	articles := Articles{
-		Article{Title: "Some Title", Desc: "Some Description", Content: "Some Content"}
+		Article{Title: "Some Title", Desc: "Some Description", Content: "Some Content"},
 	}
-	
 	fmt.Println("Endpoint: Articles")
 	json.NewEncoder(w).Encode(articles)
 }
