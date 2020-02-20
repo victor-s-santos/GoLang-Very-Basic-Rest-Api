@@ -12,6 +12,9 @@ type Article struct {
 	Content string `json:"content"`
 }
 
+type Articles []Article
+
+
 func homepage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Homepage Endpoint")
 }
