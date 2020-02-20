@@ -32,7 +32,7 @@ func handleRequests() {
 	myRouter := mux.NewRouter().StrictSlash(true)
 	myRouter.HandleFunc("/", homepage)
 	myRouter.HandleFunc("/articles", allArticles)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", myRouter))
 }
 
 func main(){
